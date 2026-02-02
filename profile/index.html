@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Modern UI</title>
+    <title>Personal Branding</title>
 
     <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -13,70 +13,66 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            min-height: 100vh;
+            background: #f8f9fa;
         }
 
         /* Navbar */
         .navbar {
-            backdrop-filter: blur(10px);
-            background: rgba(255,255,255,0.15);
+            background: #0d6efd;
         }
 
         /* Hero */
         .hero {
-            padding: 100px 20px;
+            background: linear-gradient(135deg, #0d6efd, #6610f2);
             color: white;
+            padding: 100px 0;
+        }
+
+        .hero img {
+            width: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+
+        /* Section */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-weight: 600;
+            margin-bottom: 40px;
             text-align: center;
         }
 
-        .hero h1 span {
-            color: #ffd369;
-        }
-
-        /* Card Glass */
-        .glass-card {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(12px);
-            border-radius: 20px;
-            padding: 30px;
-            color: white;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        /* Card */
+        .custom-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
 
-        .glass-card:hover {
+        .custom-card:hover {
             transform: translateY(-10px);
-        }
-
-        .icon-box {
-            width: 60px;
-            height: 60px;
-            border-radius: 15px;
-            background: rgba(255,255,255,0.25);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
         }
 
         /* Button */
         .btn-custom {
-            background: #ffd369;
-            border: none;
+            background: #0d6efd;
+            color: white;
             border-radius: 30px;
             padding: 10px 30px;
-            font-weight: 600;
         }
 
         .btn-custom:hover {
-            background: #ffb703;
+            background: #0b5ed7;
+            color: white;
         }
 
-        /* Footer */
         footer {
-            color: rgba(255,255,255,0.7);
+            background: #212529;
+            color: white;
             padding: 30px 0;
             text-align: center;
         }
@@ -87,60 +83,117 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#">UI KEREN</a>
+        <a class="navbar-brand fw-bold" href="#">MyBrand</a>
         <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navMenu">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <!-- Hero -->
-<section class="hero">
+<section class="hero text-center">
     <div class="container">
-        <h1 class="display-5 fw-bold">Bangun <span>UI Modern</span> Dengan Mudah</h1>
-        <p class="mt-3 mb-4">Desain clean, responsif, dan estetik menggunakan Bootstrap</p>
-        <button class="btn btn-custom">Get Started</button>
+        <img src="https://via.placeholder.com/200" alt="Profile">
+        <h1 class="mt-4 fw-bold">Nama Kamu</h1>
+        <p class="lead">Web Developer | UI Designer | Freelancer</p>
+        <a href="#contact" class="btn btn-light mt-3">Hire Me</a>
     </div>
 </section>
 
-<!-- Feature Cards -->
-<section class="container pb-5">
-    <div class="row g-4">
-        <div class="col-md-4">
-            <div class="glass-card">
-                <div class="icon-box">⚡</div>
-                <h5>Fast Design</h5>
-                <p>UI modern yang cepat dikembangkan dan mudah digunakan.</p>
+<!-- About -->
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="text-center col-md-8 mx-auto">
+            Saya adalah seorang web developer yang fokus pada pembuatan website modern,
+            responsif, dan mudah digunakan. Berpengalaman menggunakan HTML, CSS,
+            Bootstrap, dan JavaScript.
+        </p>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card custom-card text-center p-4">
+                    <h5>HTML & CSS</h5>
+                    <p>Membangun struktur dan tampilan website modern.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-card text-center p-4">
+                    <h5>Bootstrap</h5>
+                    <p>Membuat UI responsif dengan cepat.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-card text-center p-4">
+                    <h5>JavaScript</h5>
+                    <p>Menambahkan interaksi dan logika pada website.</p>
+                </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <div class="col-md-4">
-            <div class="glass-card">
-                <div class="icon-box">🎨</div>
-                <h5>Clean UI</h5>
-                <p>Tampilan minimalis, nyaman dipandang, dan estetik.</p>
+<!-- Portfolio -->
+<section id="portfolio">
+    <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">Website landing page modern.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2</h5>
+                        <p class="card-text">UI dashboard admin.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">Website personal branding.</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <div class="col-md-4">
-            <div class="glass-card">
-                <div class="icon-box">📱</div>
-                <h5>Responsive</h5>
-                <p>Tampilan optimal di mobile, tablet, dan desktop.</p>
-            </div>
+<!-- Contact -->
+<section id="contact" class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="text-center">
+            <p>Email: namakamu@email.com</p>
+            <p>Instagram: @namakamu</p>
+            <a href="#" class="btn btn-custom mt-3">Download CV</a>
         </div>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 UI Keren • Built with ❤️ & Bootstrap</p>
+    <p>© 2026 Nama Kamu • Personal Branding</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
